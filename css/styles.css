@@ -1,0 +1,115 @@
+:root{
+    --darkCyan: hsl(158, 36%, 37%);
+    --VeryDarkCyan: hsl(158, 32%, 22%);
+    --cream: hsl(30, 38%, 92%);
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --fuenteHeading: 'Fraunces';
+    --fuenteParrafo: 'Montserrat';
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px */
+}
+*,*:before, *:after{
+    box-sizing: inherit; 
+}
+body{
+    background-color: var(--cream);
+}
+.contenedor{
+    max-width: 60rem;
+    width: 90%;
+    margin: 3rem auto;
+    border-radius: .5rem;
+    background-color: var(--White);
+}
+.imagen{
+    background-image: url(../images/image-product-mobile.jpg);
+    height: 24rem;
+    background-size: cover;
+    border-radius: .5rem .5rem  0  0 ;
+}
+
+@media (min-width: 768px) {
+    .contenedor{
+        margin: 17.5rem auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .imagen{
+        background-image: url(../images/image-product-desktop.jpg);
+        width: 100%;
+        height: 45rem;
+        border-radius: .5rem 0  0 .5rem ;
+    }
+    .contenido{
+        height: 45rem;
+    }
+}
+.contenido{
+    text-align: left;
+    padding: 3rem 3rem;
+}
+.contenido__modelo{
+    font-size: 1.2rem;
+    font-family: var(--fuenteParrafo);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+    color: var(--DarkGrayishBlue);
+    margin: 0;
+}
+.contenido__titulo{
+    font-size: 2.7rem;
+    font-family: var(--fuenteHeading);
+    margin: 2rem 0 2.5rem 0;
+}
+.contenido__texto{
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-family: var(--fuenteParrafo);
+    color: var(--DarkGrayishBlue);
+    margin: 0 0 3.5rem 0;
+}
+.precios{
+    display: flex;
+    gap: 2.1rem;
+    align-items: center;
+}
+.precios__descuento,
+.precios__viejo{
+    margin: 0;
+}
+.precios__descuento{
+    font-size: 3rem;
+    font-family: var(--fuenteHeading);
+    color: var(--darkCyan);
+}
+.precios__viejo{
+    font-size: 1.5rem;
+    font-family: var(--fuenteParrafo);
+    color: var(--DarkGrayishBlue);
+    font-weight: normal;
+    text-decoration: line-through;
+}
+.carrito{
+    background-color: var(--darkCyan);
+    border: none;
+    color: var(--White);
+    margin-top: 2.3rem;
+    text-align: center;
+    padding: 1.8rem;
+    width: 100%;
+    font-size: 1.2rem;
+    font-family: var(--fuenteParrafo);
+    border-radius: .7rem;
+    font-weight: bold;
+    transition: background-color .3s ease;
+}
+.carrito:hover{
+    cursor: pointer;
+    background-color: var(--VeryDarkCyan);
+}
+
